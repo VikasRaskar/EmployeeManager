@@ -17,12 +17,6 @@
     <div class="mat-elevation-z8">
       <table mat-table [dataSource]="dataSource" matSort>
 
-         <!-- Name Column -->
-         <ng-container matColumnDef="id">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Employee id </th>
-          <td mat-cell *matCellDef="let row"> {{row.id}} </td>
-        </ng-container>
-
         <!-- Name Column -->
         <ng-container matColumnDef="emp_Name">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Employee Name </th>
@@ -67,7 +61,7 @@
             <button mat-icon-button (click)="editEmployee(row)" color="primary">
               <mat-icon>edit</mat-icon>
             </button>
-            <button mat-icon-button (click)="deleteEmployee(row.id)" color="warn">
+            <button mat-icon-button (click)="deleteEmployee(row._id)" color="warn">
               <mat-icon>delete</mat-icon>
             </button>
           </td>

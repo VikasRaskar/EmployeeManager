@@ -13,7 +13,7 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 export class AppComponent implements OnInit {
   title = 'EmployeeManager';
-  displayedColumns: string[] = ['id','emp_Name', 'emp_Dep', 'emp_Salary', 'gender', 'join_Date', 'description', 'action'];
+  displayedColumns: string[] = ['emp_Name', 'emp_Dep', 'emp_Salary', 'gender', 'join_Date', 'description', 'action'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -61,8 +61,8 @@ export class AppComponent implements OnInit {
     
   }
 
-  deleteEmployee(id: number){
-    this.api.deleteEmployee(id)
+  deleteEmployee(_id: number){
+    this.api.deleteEmployee(_id)
     .subscribe({
       next: (res)=>{
         alert('Employee Deleted Successfully')

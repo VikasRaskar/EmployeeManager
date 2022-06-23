@@ -22,7 +22,6 @@ export class DialogComponent implements OnInit {
 
   ngOnInit(): void {
     this.employeeForm = this.fb.group({
-            id: ['', Validators.required],
       emp_Name: ['', Validators.required],
       emp_Dep: ['', Validators.required],
       join_Date: ['', Validators.required],
@@ -62,7 +61,7 @@ export class DialogComponent implements OnInit {
     }
   }
   updateEmployee(){
-    this.api.patchEmployee(this.employeeForm.value, this.editData.id)
+    this.api.patchEmployee(this.employeeForm.value, this.editData._id)
     .subscribe({
       next: (res)=>{
         alert('Employee Updated Successfully');

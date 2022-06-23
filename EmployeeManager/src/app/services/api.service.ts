@@ -15,11 +15,11 @@ export class ApiService {
     return this.http.get<any>("http://localhost:4000/employee/")
   }
 
-  patchEmployee(data: any, id: number){
-    return this.http.put<any>("http://localhost:4000/employee/"+id,data)
+  patchEmployee(data: any, _id: number){
+    return this.http.put<any>("http://localhost:4000/employee/"+_id,data)
   }
 
-  deleteEmployee(id: number){
-    return this.http.delete<any>("http://localhost:4000/employee/"+id)
+  deleteEmployee(_id: number){
+    return this.http.delete<any>("http://localhost:4000/employee/"+_id)
   }
 }

@@ -33,7 +33,7 @@ router.get('/:EmpId', async (req, res) => {
 //Delete Specific Employee by Id
 router.delete('/:EmpId', async (req, res) => {
     try {
-        const deleteEmp = await Employee.remove({_id: req.params.EmpId });
+        const deleteEmp = await Employee.remove({ _id: req.params.EmpId });
         res.json(deleteEmp)
     }
     catch (err) {
