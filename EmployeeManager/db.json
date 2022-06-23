@@ -1,0 +1,23 @@
+{
+  "employee": [
+    {
+      "emp_Name": "Vikas Raskar",
+      "emp_Dep": "Operations Department",
+      "join_Date": "2022-02-20T18:30:00.000Z",
+      "emp_Salary": 26000,
+      "gender": "Male",
+      "description": "Web Devloper",
+      "id": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
